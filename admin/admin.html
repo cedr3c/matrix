@@ -46,7 +46,7 @@ const fileDisplayArea = document.getElementById('fileDisplayArea');
 
 function askname() {
   const name = prompt('Nachricht von ...');
-  fetch('../tickets/Nachricht_von_'+ name +'.txt')
+  fetch('../../tickets/Nachricht_von_'+ name +'.txt')
       .then((response) => {
         return response.text();
       })
@@ -103,8 +103,8 @@ function askname() {
   }
 
   // Dateinamen beim Laden der Seite abrufen
-  getFileNames('../tickets', 'ticketList');
-  getFileNames('../files', 'fileList');
+  getFileNames('../../tickets', 'ticketList');
+  getFileNames('../../files', 'fileList');
 </script>
 
 <button onclick="goto()">go to</button>
@@ -113,7 +113,7 @@ function askname() {
   function goto() {
     const where = prompt('Zu welchem File wollen sie?')
     
-    const filePath1 = '../files/' + where;
+    const filePath1 = '../../files/' + where;
 
     window.location.href = filePath1;
   }
