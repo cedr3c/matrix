@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.color {
+    font-family: 'Courier New', monospace;
+    color: #32CD32;
+    transition: 0.3s;
+    padding: 10px; /* Dies vergrößert die Hitbox um 10px in alle Richtungen */
+  }
+  
+  .color:hover {
+      color: #32CD32;
+  }
+  
+  html {
+      background-color: black;
+      margin-left: 1%;
+      color: #58F129;
+      font-family: 'Fira Code', monospace;
+  }
+
+  .navbar {
+    font-family: 'Fira Code', monospace;
+    color: #58F129;
+    font-size: 20pt;
+    text-decoration: none;
+  }
+
+  .iconl {
+    background-color: #58F129;
+    height: 20pt;
+    width: 10pt;
+    position: absolute;
+    margin-top: 0.2%;
+    margin-left: 0.8%;
+    z-index: 100;
+  }
+
+.greybox {
+    background-color: #1D1D1D;
+    height: 25%;
+    margin-left: -10%;
+    width: 110%;
+    position: absolute;
+    z-index: -10;
+}
+
+
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+
+.information {
+    padding: 2%;
+    width: 30%;
+    font-size: 2vh;
+}
+
+.links {
+    position: absolute;
+    margin-left: 86%;
+    margin-top: -20px;
+    font-size: 2vh;
+}
+
+.txtlinks {
+    font-size: 2vh;
+    font-family: 'Fira Code', monospace;
+    padding: -1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin-bottom: -15px;
+}
+
+
+.space {
+    line-height: 5%;
+}
+
+html {
+    width: 98%;
+}
+
+.size {
+    font-size: 15pt;
+}
+
+.sizex {
+    font-size: 20pt;
+}
+
+
+
+.formborder {
+    border-style: solid;
+    padding: 1%;
+    text-align: left;
+    width: 30%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    font-size: 20pt;
+}
+
+.formborder label, .formborder input {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+
+.input {
+    background-color: transparent;
+    border-color: #58F129;
+    color: #58F129;
+}
+
+.formular {
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.senden {
+    background-color: #58F129;
+    color: white;
+    border: none;
+    padding: 3%;
+}
+
+#name {
+    height: 3vh;
+}
+
+#email {
+    height: 3vh;
+}
+
+#message {
+    height: 10vh;
+    width: 12vw;
+}
+
+.fileuploader {
+    border-style: solid;
+    padding: 1%;
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 30%;
+    margin-top: 5%;
+}
+
+#upload {
+    background-color: #58F129;
+    border-style: none;
+    color: white;
+    padding: 3%;
+    font-weight: bold;
+    border-radius: 25pt;
+}
+
+/* CSS */
+/* CSS */
+.box-container {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+}
+
+.colorbox {
+    width: 15vh;
+    height: 15vh;
+    margin-right: 20vh; /* Abstand zwischen den Boxen, hier in Pixeln */
+}
+
+.colorbox:last-child {
+    margin-right: 0; /* Kein Abstand für die letzte Box */
+}
+
+.colorboxr {
+    width: 15vh;
+    height: 15vh;
+    background-color: red;
+}
+
+.colorboxg {
+    width: 15vh;
+    height: 15vh;
+    background-color: #58F129;
+}
+
+.colorboxb {
+    width: 15vh;
+    height: 15vh;
+    background-color: blue;
+}
+
+.colorboxp {
+    width: 15vh;
+    height: 15vh;
+    background-color: #9900ff;
+}
+
+.colorboxt {
+    width: 15vh;
+    height: 15vh;
+    background-color:  transparent;
+}
+

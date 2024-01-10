@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      const encryptedPassword = "Rm9ydG5pdGU=";
+      const encryptedUser = "Rm9ydG5pdGU=";
+      let isPasswordCorrect = sessionStorage.getItem('isPasswordCorrect');
+      if (isPasswordCorrect !== 'true') {
+        while (true) {
+          const enteredUser = prompt('Bitte geben Sie den Benutzernamen ein.');
+          const enteredPassword = prompt('Bitte geben Sie das Passwort ein.');
+          if (enteredUser === atob(encryptedUser)){
+            if (enteredPassword === atob(encryptedPassword)) {
+            alert('Passwort korrekt!');
+            sessionStorage.setItem('isPasswordCorrect', 'true');
+            sessionStorage.setItem('username', atob(encryptedUser));
+            break;
+          } else {
+            alert('Fehler!');
+          }
+          } else {
+            alert('Fehler!');
+          }
+      }
+    }
+
+
+    </script>
+</head>
+<body>
+  <h1 id="admin">ADMIN</h1>
+
+  <div id="fileDisplayArea"></div>
+
+  <button onclick="askname()">SEHEN</button>
+  <button onclick="location.reload();">CLEAR</button>
+
+
+  <script>
+
+
+const fileDisplayArea = document.getElementById('fileDisplayArea');
+
+function askname() {
+  const name = prompt('Nachricht von ...');
+  fetch('../webserver_hosting-main/tickets/Nachricht_von_'+ name +'.txt')
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        const text = document.createElement('p');
+        text.textContent = data;
+        fileDisplayArea.appendChild(text);
+      });
+}
+
+
+
+  </script>
+
+
+<h1>Tickets:</h1>
+<ul id="ticketList"></ul>
+
+<h1>Files:</h1>
+<ul id="fileList"></ul>
+
+
+<script>
+  // Funktion zum Abrufen der Dateinamen
+  async function getFileNames(folderPath, listElementId) {
+    try {
+      const response = await fetch(folderPath);
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const links = doc.querySelectorAll('a');
+
+      const fileNames = Array.from(links).map(link => {
+        // Extrahiere nur den Dateinamen ohne das Datumspräfix
+        const parts = link.textContent.trim().split(' ');
+        return parts[0];
+      });
+
+      displayFileNames(fileNames, listElementId);
+    } catch (error) {
+      console.error(`Fehler beim Abrufen der Dateinamen für ${folderPath}:`, error);
+    }
+  }
+
+  // Funktion zum Anzeigen der Dateinamen
+  function displayFileNames(fileNames, listElementId) {
+    const fileListElement = document.getElementById(listElementId);
+    fileListElement.innerHTML = ''; // Leere die Liste, um sie zu aktualisieren
+    fileNames.forEach(fileName => {
+      const listItem = document.createElement('li');
+      listItem.textContent = fileName;
+      fileListElement.appendChild(listItem);
+    });
+  }
+
+  // Dateinamen beim Laden der Seite abrufen
+  getFileNames('../webserver_hosting-main/tickets', 'ticketList');
+  getFileNames('../webserver_hosting-main/files', 'fileList');
+</script>
+
+<button onclick="goto()">go to</button>
+
+<script>
+  function goto() {
+    const where = prompt('Zu welchem File wollen sie?')
+    
+    const filePath1 = '../webserver_hosting-main/files/' + where;
+
+    window.location.href = filePath1;
+  }
+</script>
+    
+</body>
+</html>

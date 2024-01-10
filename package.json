@@ -1,0 +1,23 @@
+{
+    "name": "nodejs-news",
+    "version": "1.0.0",
+    "description": "",
+    "main": "client.js",
+    "scripts": {
+        "start": "node client.js",
+        "dev": "nodemon client.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "me",
+    "license": "",
+    "dependencies": {
+        "express": "^4.18.2",
+        "fs": "*",
+        "http": "*",
+        "multer": "^1.4.3",
+        "path": "*"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}

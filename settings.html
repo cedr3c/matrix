@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>WEBSERVER</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand navbar color" id="navbartext" href="index.html">&#9610;WEBSERVER</a>
+      </nav>
+
+    <br>  
+
+    <div class="greybox"></div>
+
+        <table style="width: 100%;" class="color">
+            <tr>
+                <td style="text-align: left;">
+                    <div class="information">Willkommen auf dem Webserver-Netzwerk. Hier können sie die Webseite besichtigen. Viel Spass!!!</div>
+                </td>
+                <td style="text-align: right; vertical-align: top;">
+                    <a class="color txtlinks "  href="about.html"><ul>ABOUT</ul></a>
+                    <a  class="color txtlinks" href="settings.html"><ul>SETTINGS</ul></a>
+                    <a class="color txtlinks" href="admin.html" ><ul>ADMIN</ul></a>
+                </td>
+            </tr>
+        </table>
+
+        <table style="width: 100%; margin-top: 3%;">
+            <tr>
+                <td style="text-align: left;">
+                    <h3 class="version color space"></h3>
+                </td>
+                <td style="text-align: right; vertical-align: top;">
+                    <h3 class="color close" onclick="closebtn()">CLOSE</h3>
+                </td>
+            </tr>
+            <tr style="margin-top: -1.5%; position: absolute;">
+                <td style="text-align: left;">
+                    <h3 class="color space" id="date1"></h3>
+                    <h3 class="color space" id="time1"></h3>
+                </td>
+            </tr>
+        </table>
+        
+        
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<h3 class="color sizex">// Settings</h3>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<!-- HTML -->
+<div class="box-container">
+    <div class="box">
+        <div onclick="red()" class="colorboxr"></div>
+        <div class="colorboxt"></div>
+        <div onclick="green()" class="colorboxg"></div>
+        <div class="colorboxt"></div>
+        <div onclick="blue()" class="colorboxb"></div>
+        <div class="colorboxt"></div>
+        <div onclick="violet()" class="colorboxp"></div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<style>  
+    html {
+        height: 100%;
+    }
+
+    .text {
+      font-family: 'Courier New', monospace;
+      color: #32CD32;
+      transition: 0.3s;
+      padding: 10px; /* Dies vergrößert die Hitbox um 10px in alle Richtungen */
+    }
+    
+    .text:hover {
+        color: #32CD32;
+    }
+    
+    html {
+        background-color: black;
+    }
+    </style>
+
+
+<footer>
+    <br>
+    <br>
+
+    <p class="color" style="text-align: center; letter-spacing: .2vw;">---------------------------------------------------------------------------------------</p>
+</footer>
+
+  
+<script src="server.js"></script>
+</body>
+</html>
